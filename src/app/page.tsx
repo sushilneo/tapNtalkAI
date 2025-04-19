@@ -5,7 +5,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-100 to-white px-4 py-8">
       <header className="mb-8 text-center">
         <h1 className="text-4xl font-extrabold text-blue-700 drop-shadow-sm">🗣️ TapNTalk AI</h1>
-        <p className="text-gray-600 mt-2 text-base">Speak Buddy — built for students with speech impairments</p>
+        <p className="text-gray-600 mt-2 text-base">Speak smarter — built for students with speech impairments</p>
       </header>
 
       <GestureInput />

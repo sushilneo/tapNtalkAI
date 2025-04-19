@@ -14,8 +14,8 @@ export default function GestureInput() {
   const [output, setOutput] = useState('');
 
   const handleClick = async (gesture: string) => {
-    const intent = gestureMap[gesture];
-    const polite = await expandIntent(intent);
+    const baseIntent = gestureMap[gesture];
+    const polite = await expandIntent(baseIntent);
     setOutput(polite);
     speak(polite);
   };
@@ -31,7 +31,7 @@ export default function GestureInput() {
   return (
     <div className="flex flex-col items-center gap-6 p-6 bg-white rounded-2xl shadow-lg max-w-md w-full">
       <h2 className="text-xl font-semibold text-gray-700">Tap a Gesture to Speak 👇</h2>
-      
+
       <div className="flex gap-4 text-4xl">
         {Object.keys(gestureMap).map((gesture) => (
           <button
