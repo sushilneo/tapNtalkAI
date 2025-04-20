@@ -1,7 +1,9 @@
+// File: src/components/GestureInput.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import { expandIntent } from '@/lib/openai';
+import EmergencyPanel from './EmergencyPanel';
 
 const gestureMap: { [key: string]: string } = {
   '✋': 'I have a question.',
@@ -9,6 +11,18 @@ const gestureMap: { [key: string]: string } = {
   '🤔': 'I need help.',
   '🙋‍♂️': 'I want to answer.',
 };
+
+async function logMessage(message: string, source: string) {
+  try {
+    await fetch('/api/log', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, source }),
+    });
+  } catch (error) {
+    console.error('Logging failed:', error);
+  }
+}
 
 export default function GestureInput() {
   const [output, setOutput] = useState('');
@@ -35,12 +49,15 @@ export default function GestureInput() {
     const polite = await expandIntent(baseIntent);
     setOutput(polite);
     speak(polite);
+    logMessage(polite, 'gesture');
   };
 
   const handleCustomSpeak = async () => {
     if (customInput.trim()) {
-      setOutput(customInput.trim());
-      speak(customInput.trim());
+      const polite = await expandIntent(customInput.trim());
+      setOutput(polite);
+      speak(polite);
+      logMessage(polite, 'typed');
       setCustomInput('');
     }
   };
@@ -119,6 +136,9 @@ export default function GestureInput() {
           <p className="text-lg font-medium text-blue-800">{output}</p>
         </div>
       )}
+
+      {/* 🚨 Emergency Phrase Mode */}
+      <EmergencyPanel />
     </div>
   );
 }
