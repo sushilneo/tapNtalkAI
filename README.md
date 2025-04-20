@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📢 TapNTalk AI
 
-## Getting Started
+**Your Speak Buddy for Non-Verbal Students**  
+Empowering students with speech impairments to express themselves — clearly, quickly, and confidently.
 
-First, run the development server:
+![TapNTalk Demo Banner](https://user-images.githubusercontent.com/0000000/banner-placeholder.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🎯 What is TapNTalk AI?
+TapNTalk AI is an assistive AI-powered web app designed for students who face difficulty speaking. It converts simple gestures, typed messages, and urgent phrases into natural spoken language using AI rephrasing and voice synthesis.
+
+Built with inclusivity at its core, TapNTalk AI bridges the communication gap between non-verbal students and educators — fostering clearer interaction, quicker support, and deeper understanding.
+
+---
+
+## 🚀 Features
+
+- ✋ **Gesture-to-Speech**  
+  Tap emoji gestures like "✋" or "🤔" and hear a clear, AI-enhanced sentence spoken aloud.
+
+- 📝 **Type-to-Speech**  
+  Let students type out a message, and it’s instantly spoken in a natural voice.
+
+- 🚨 **Emergency Phrase Mode**  
+  One-tap buttons for quick alerts like “I feel sick” or “I need help now.”
+
+- 🔊 **Voice Selection**  
+  Choose from different available system voices for more personalized expression.
+
+---
+
+## 🧠 How It Uses AI
+
+- 🎯 AI-powered message refinement with **OpenRouter** (e.g., Lepton/GPT)
+- Simple inputs like "I need help" become polite, expressive sentences like:
+  > "Can you please help me with this topic?"
+- Ensures clarity, empathy, and classroom-appropriate language — all in real-time
+
+---
+
+## 🌐 Live Demo
+
+🔗 [https://tapntalk.vercel.app](https://tapntalk.vercel.app) *(Hosted on Vercel)*
+
+---
+
+## 🛠 Built With
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [OpenRouter.ai](https://openrouter.ai/) API for AI rephrasing
+- [Vercel](https://vercel.com/) for hosting
+
+---
+
+## 📁 Project Structure
+
+```
+/src
+├── app
+│   ├── page.tsx           # Main interaction page
+│
+├── components
+│   ├── GestureInput.tsx   # Gesture/Type/Voice input UI
+│   ├── EmergencyPanel.tsx # Emergency mode buttons
+│
+├── lib
+│   └── openai.ts          # API call to OpenRouter
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📹 Demo Video (Optional)
+[Add YouTube link here if available]
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🤝 Team
+**Made by Sushil Phuyal** for FutureHacks 7 ✨
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏆 Why It Matters
+> "For a child who cannot speak, every tap is a chance to connect, share, and belong."
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+TapNTalk AI is more than a hackathon project — it’s a step toward equitable, AI-enhanced communication in education.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📬 Want to Contribute?
+Feel free to fork and enhance this idea — whether it’s for multilingual support, teacher analytics, or accessibility upgrades!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Thank you for checking out TapNTalk AI! 💙**
