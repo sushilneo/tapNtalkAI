@@ -3,8 +3,6 @@
 **Your Speak Buddy for Non-Verbal Students**  
 Empowering students with speech impairments to express themselves — clearly, quickly, and confidently.
 
-![TapNTalk Demo Banner](https://user-images.githubusercontent.com/0000000/banner-placeholder.png)
-
 ---
 
 ## 🎯 What is TapNTalk AI?
@@ -72,7 +70,7 @@ Built with inclusivity at its core, TapNTalk AI bridges the communication gap be
 ---
 
 ## 📹 Demo Video (Optional)
-[Add YouTube link here if available]
+[https://youtu.be/hgvFo4t81xQ]
 
 ---
 
